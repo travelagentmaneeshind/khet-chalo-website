@@ -110,6 +110,38 @@ img{max-width:100%; display:block;}
 .pillar h3{font-size:17px; margin:8px 0 6px;}
 .pillar p{font-size:14px; color:var(--ink-soft); margin:0;}
 
+/* ---------- gallery ---------- */
+.section-lede{color:var(--ink-soft); max-width:62ch; margin-bottom:6px;}
+.gallery-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:28px;
+}
+.shot{
+  position:relative; margin:0; overflow:hidden;
+  border-radius:var(--radius); border:1px solid var(--border);
+  box-shadow:var(--shadow); background:var(--surface-2);
+}
+.shot-wide{grid-column:span 2;}
+.shot img{
+  width:100%; height:100%; aspect-ratio:9/7; object-fit:cover;
+  transition:transform .5s ease;
+}
+.shot:hover img{transform:scale(1.04);}
+.shot figcaption{
+  position:absolute; inset-inline:0; bottom:0;
+  padding:26px 16px 12px;
+  font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:.04em;
+  color:#F8F1DE;
+  background:linear-gradient(180deg, rgba(28,23,18,0) 0%, rgba(28,23,18,.82) 70%);
+}
+@media (max-width:900px){
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .shot-wide{grid-column:span 2;}
+}
+@media (max-width:520px){
+  .gallery-grid{grid-template-columns:1fr; gap:12px;}
+  .shot-wide{grid-column:span 1;}
+}
+
 /* ---------- launch / dark bands ---------- */
 .launch{background:var(--soil); color:var(--paper); text-align:center; border-bottom:none;}
 .launch .kicker{color:var(--gold);}
