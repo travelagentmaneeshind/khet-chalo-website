@@ -24,6 +24,17 @@ or making claims about the property.
 mean slow back-and-forth just to find where a setting lives.
 
 ## Standing workflow rules (apply every session, this repo and others)
+0. **Check it yourself before asking — no exceptions.** If any tool already
+   available in the session can answer the question, call it before asking
+   the user. Never ask "do you have X", "is this connected", "does this
+   repo/account exist", or "where do I find Y" when a tool call resolves it
+   directly (`list_repos`, a connector's own list/search call, a web
+   search, etc.). **Concrete failure to never repeat:** asked "are Khet
+   Chalo and Shivnandini repos on GitHub?" instead of just calling
+   `list_repos` — which was already available and used moments later
+   anyway. Only ask the user when the answer needs their login/credentials,
+   is a judgment call only they can make, or every available tool has
+   already been checked and still can't tell.
 1. **Check for a connected MCP/connector or plugin before doing anything
    manually.** Vercel, GitHub, n8n, HTML/CSS-to-Image, and other MCP tools
    may be available in a given session — use them directly instead of
