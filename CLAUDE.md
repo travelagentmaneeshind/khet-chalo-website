@@ -51,3 +51,10 @@ mean slow back-and-forth just to find where a setting lives.
 
 This same CLAUDE.md pattern also exists in `YEIDA_website` and
 `shivnandiniinfra-website` — keep them consistent when updating the rules.
+
+## Full portfolio
+See `PORTFOLIO.md` in `travelagentmaneeshind/YEIDA_website` for the
+complete map of all of Maneesh's web properties, Vercel projects/domains,
+connector status, and known gaps (including a note that the Vercel project
+matching this repo's name, `khet-chalo-website`, is a stale duplicate —
+the live site runs from project `khet-chalo-website-8aqs`).
