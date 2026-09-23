@@ -49,6 +49,18 @@ mean slow back-and-forth just to find where a setting lives.
 5. When blocked (missing connector auth, no repo access, etc.), say so
    plainly and point to the fix — don't guess or fabricate steps.
 
+## Decision boundaries (confirmed with Maneesh, 2026-09-23)
+6. **Always ask before pushing, committing to a shared branch, merging, or
+   deploying — every time, even low-risk doc-only changes.** Separate from
+   rule 0 (checking facts/tool state yourself, still done without asking).
+   Any *write* action with real-world effect waits for an explicit
+   go-ahead. No "it's just docs" exception.
+7. **Weekly check-in cadence is the only proactive alert, on purpose.**
+   Don't add mid-week/immediate alerting for failures unless asked.
+8. **Paid upgrades/spending:** fine to flag when relevant, with cost and
+   tradeoff stated plainly — never purchase or upgrade without Maneesh's
+   explicit yes first.
+
 This same CLAUDE.md pattern also exists in `YEIDA_website` and
 `shivnandiniinfra-website` — keep them consistent when updating the rules.
 
